@@ -1,0 +1,26 @@
+name: Python application test with Github Actions #Nombre del trabajo
+on: [push] #En every push or every event that make a change 
+jobs: #Definición del trabajo
+  build: #Creaos nueva sección
+    name: Build secttion
+    runs-on: ubuntu-latest #Running in this particular conteiner
+    steps:
+    - uses: actions/checkout@v2 #indica como se activa dicha acción (esta acción viene de actions)
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1 # Lo que esta después del arroba es la versión, 
+      #lo que viene antes d ela diagonal es el repositorio dende viene definida a acciíon
+      with: #Opciones para la acción
+        python-version: 3.8 #Install this version of python
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Lint with Pylint
+      run:
+        make lint
+    - name: Test with Pytest
+      run:
+        make test
+    - name: Format code with Python Black
+      run:
+        make format
+        
