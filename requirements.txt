@@ -1,0 +1,29 @@
+# Linting is the automated checking of your source code for programmatic 
+# and stylistic errors. This is done by using a lint tool (otherwise known 
+# as linter). A lint tool is a basic static code analyzer.
+
+# Lint programming is a type of automated check. It should happen early 
+# in development, before code reviews and testing. That’s because automated 
+# code checks make the code review and test processes more efficient. And 
+# they free your developers to focus on the right things.
+
+# Linting is the key to finding and resolving functional and structural 
+# problems. By using linting tools, you can identify and correct common code 
+# mistakes without having to run your app or write test cases.
+
+
+# Another alternatives could be pyflake or flake8
+pylint 
+
+# Testing library
+pytest
+
+#Accumulative library
+click
+
+# Formatting library
+# Pone bien binito el código
+black
+
+# Covarage tool that shows how much of my code is got covered
+pytest-cov
